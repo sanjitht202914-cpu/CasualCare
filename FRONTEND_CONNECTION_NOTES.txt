@@ -1,0 +1,10 @@
+Casual Care frontend integration
+
+Copy your own .env file into Casualcare 2 (next to package.json). Do not share it.
+Run npm install, then npm run dev.
+
+The Schedule Tele-Consult button opens a booking form and attempts to INSERT into public.appointments using the logged-in patient_id and selected doctor_id. Supabase RLS must allow the logged-in patient to SELECT doctors and SELECT/INSERT appointments. If booking fails, check the displayed error.
+
+Other modules may still contain demo-only UI and are not verified end-to-end. No live video-call service is implemented by this change.
+
+Build verification in this container was blocked by the uploaded Windows node_modules native bindings. Install dependencies on your computer to test.

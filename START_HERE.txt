@@ -1,0 +1,18 @@
+CASUALCARE SNS DEMO — START HERE
+
+This ZIP combines the SNS frontend and the existing Supabase application.
+The two supplied ZIPs did NOT contain a real .env file, so the Supabase public key cannot be recovered from them.
+
+1. Open the extracted "Casualcare 2" folder in Antigravity.
+2. Find .env.example and make a copy named .env (in the same folder as package.json).
+3. Open .env and set VITE_SUPABASE_URL to your Supabase project URL and VITE_SUPABASE_ANON_KEY to your Supabase PUBLISHABLE/ANON key. Find the key in Supabase > Project Settings > API Keys.
+   Do NOT use the service_role/secret key. Do NOT share passwords or tokens.
+4. In terminal run: npm install
+5. Then run: npm run dev
+6. Open http://localhost:5173
+
+Appointment path: frontend -> local Vite /sns-webhook proxy -> SNS Workbench Route 2 -> Supabase appointments.
+SNS workflow must be active and its Route 2 HTTP POST must correctly map appointment fields.
+Do not click booking repeatedly if a request fails; check the Supabase appointments table first.
+
+NOTE: Live SNS workflow settings are not contained in either ZIP and cannot be repaired from these files.
